@@ -1,0 +1,27 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+<div class="keep-category-panel">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Take a category</mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class='keep-category-wrapper'>
+
+            <mat-form-field>
+                <input matInput name="title" [(ngModel)]="category.id" placeholder="category ID">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput name="title" [(ngModel)]="category.categoryName" placeholder="category title">
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput name="text" [(ngModel)]="category.categoryDescription" placeholder="category description"></textarea>
+            </mat-form-field>
+            <div class='keep-category-button'>
+                <button mat-raised-button (click)="addCategory()" color="primary">Done</button>
+            </div>
+        </div>
+    </mat-expansion-panel>
+</div>
+
+<!-- Expansion panel to add new notes -->

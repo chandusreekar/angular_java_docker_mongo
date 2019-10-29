@@ -1,0 +1,12 @@
+server: 
+  port: 8089
+spring: 
+  datasource: 
+    password: root
+    url: "jdbc:mysql://localhost:3306/userDb"
+    username: root
+  jpa: 
+    hibernate: 
+      ddl-auto: update
+    show-sql: true
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect

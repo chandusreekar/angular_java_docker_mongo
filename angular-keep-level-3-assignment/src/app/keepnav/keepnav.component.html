@@ -1,0 +1,56 @@
+
+<router-outlet name="catEditOutlet"></router-outlet>
+<mat-sidenav-container class="sidenav-container">
+  <!-- <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)" style="background-color: #bcab90">
+    <mat-toolbar color="primary"></mat-toolbar>
+    <mat-nav-list>
+      <button mat-button (click)="onNotes()" class="myBtn">
+        <span>Notes</span>
+      </button>
+      <button mat-button (click)="onCategory()" class="myBtn">
+        <span>Category</span>
+      </button>
+
+      <button mat-button (click)="onReminder()" class="myBtn">
+        <span>Reminder</span>
+      </button>
+    </mat-nav-list>
+  </mat-sidenav> -->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="">
+        <span style="left:33%;position: absolute;">{{applicationTitle}}</span>
+      </div>
+      <!-- <div class="button" style="left:90%;position: absolute;">
+        <button mat-button (click)="onLogout()">Logout</button>
+      </div> -->
+
+<!-- new code starts -->
+<mat-nav-list>
+  <button mat-button (click)="onNotes()" class="myBtn">
+    <span>NOTES</span>
+  </button>
+  <button mat-button (click)="onCategory()" class="myBtn">
+    <span>CATEGORY</span>
+  </button>
+
+  <button mat-button (click)="onReminder()" class="myBtn">
+    <span>REMINDER</span>
+  </button>
+
+  <button mat-button (click)="logoutUser()" class="myBtn">
+    <span>LOGOUT</span>
+  </button>
+</mat-nav-list>
+
+<!-- new code ends -->
+
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

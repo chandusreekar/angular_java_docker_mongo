@@ -1,0 +1,55 @@
+.reg-container{
+  width: 50vw;
+  margin: auto;
+  padding-top: 10vh;
+}
+.reg-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.reg-wrapper > * {
+  width: 100%;
+}
+.errorMessage {
+  color: red;
+  padding: 1em 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-action{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 0 0 0;
+  width: 50vw;
+}
+
+.loginSubmitButtonDiv{
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em 0 0 0;
+  margin: 2%; */
+
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0 0 0;
+    width: 50vw;
+    height:5vh;
+  justify-content: space-between;
+
+}
+
+h2{
+  color: blue;
+  margin-left: 45%;
+  display: flex;
+  align-content: center;
+  
+}

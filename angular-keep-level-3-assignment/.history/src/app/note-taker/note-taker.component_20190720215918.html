@@ -1,0 +1,71 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+<div class="keep-note-panel">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Take a note</mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class='keep-note-wrapper'>
+
+            <mat-form-field>
+                    <span style="color:red;padding-left: 30px">  *  </span>
+                <input matInput name="title" [(ngModel)]="note.noteTitle" placeholder="Title">
+            </mat-form-field>
+
+            <mat-form-field>
+                    <span style="color:red;padding-left: 30px">  *  </span>
+                <textarea matInput name="text" [(ngModel)]="note.noteContent" placeholder="Text"></textarea>
+            </mat-form-field>
+
+            <mat-form-field>
+                    <span style="color:red;padding-left: 110px">  *  </span>
+                <mat-select  matInput placeholder="Select Category"  [(ngModel)]="note.category">
+                  <mat-option *ngFor="let category of categories" [value]="category">
+                    {{ category.categoryName }}
+                  </mat-option>
+                </mat-select>
+          </mat-form-field>
+
+          
+           <!-- <mat-form-field>
+                <span style="color:red;padding-left: 110px">  *  </span>
+            <mat-select  matInput placeholder="Select reminder"  [(ngModel)]="note.reminder">
+              <mat-option *ngFor="let reminder of reminders" [value]="reminder">
+                {{ reminder.reminderName }}
+              </mat-option>
+            </mat-select>
+      </mat-form-field>  -->
+
+     
+           <!-- <label id="example-radio-group-label">Select reminder<span style="color:red;padding-left: 10px">  *  </span></label>
+            
+             <mat-radio-group class="example-radio-group" 
+                    [(ngModel)]="note.reminders">
+                    <mat-radio-button class="example-radio-button" *ngFor="let reminder of reminderData" [value]="reminder">
+                      {{reminder.reminderName}}
+                    </mat-radio-button>
+                   
+            </mat-radio-group> -->
+
+            <mat-label>Reminders</mat-label>
+            <mat-select multiple [(ngModel)]="note.reminders">
+              <mat-option *ngFor="let reminder of reminderData" [value]="reminder">{{reminder.reminderName}}</mat-option>
+            </mat-select>
+            
+
+
+
+      
+
+
+
+
+            <div class='keep-note-button'>
+                <button mat-raised-button (click)="addNote()" color="primary">Done</button>
+            </div>
+        </div>
+    </mat-expansion-panel>
+</div>
+
+<!-- Expansion panel to add new notes -->

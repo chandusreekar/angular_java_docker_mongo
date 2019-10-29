@@ -1,0 +1,31 @@
+.keep-note-panel {
+    width: 60vw;
+    margin: auto;
+    margin-top: 5%;
+}
+.keep-note-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.keep-note-button{
+    display : flex;
+    justify-content: flex-end;
+}
+.error-message {
+    color: red;
+    padding: 1em 0 0 0;
+}
+
+.example-radio-group-label{
+    color: aliceblue;
+}
+
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }
